@@ -6,7 +6,7 @@ import image3 from "../../images/slider/SLID3faluas.jpg"
 import image4 from "../../images/slider/SLID4principe.jpg"
 import image5 from "../../images/slider/SLID5palacio.jpg"
 import "./Slider.css"
-import BtnAcceso from "../buttons/BtnAcceso"
+import BtnAcceso from "../buttons/btnAcceso"
 
 const Carousel = () => {
   const settings = {
