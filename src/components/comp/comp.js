@@ -25,7 +25,7 @@ function MyComponent({ onColorChange, onSizeChange }) {
     onChange={handleColorChange}
   />
   <label htmlFor="black-radio">
-    <StaticImage src="../../images/Qrs/qrnegro.png" alt="Negro" class='qrcolores' />
+    <StaticImage src="../../images/QRs/qrnegro.png" alt="Negro" class='qrcolores' />
   </label>
   <br />
   <input
@@ -37,7 +37,7 @@ function MyComponent({ onColorChange, onSizeChange }) {
     onChange={handleColorChange}
   />
   <label htmlFor="blue-radio">
-    <StaticImage src="../../images/Qrs/qrazul.png" alt="Azul" class='qrcolores' />
+    <StaticImage src="../../images/QRs/qrazul.png" alt="Azul" class='qrcolores' />
   </label>
   <br />
   <input
@@ -49,7 +49,7 @@ function MyComponent({ onColorChange, onSizeChange }) {
     onChange={handleColorChange}
   />
   <label htmlFor="red-radio">
-    <StaticImage src="../../images/Qrs/qrrojo.png" alt="Rojo" class='qrcolores'/>
+    <StaticImage src="../../images/QRs/qrrojo.png" alt="Rojo" class='qrcolores'/>
   </label>
     <div >
       <label htmlFor="sizeSelect">Elige tamaño</label> <hr className='hr'/>
