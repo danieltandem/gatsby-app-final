@@ -28,7 +28,7 @@ label {
     margin: 10px;
     cursor: pointer;
   }
-  .qrcolores:hover{
+  .qrcolores:hover {
     transform: scale(1.3);
   }
 .hr{
