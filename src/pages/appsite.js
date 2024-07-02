@@ -5,7 +5,7 @@ import "../components/css-pages/appsite.css";
 import Footer from "../components/footer/Footer";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import BtnPrimary from "../components/buttons/BtnPrimary";
+import BtnPrimary from '../components/buttons/BtnPrimary';
 import BtnSecondary from "../components/buttons/BtnSecondary";
 import BtnProfile from "../components/buttons/BtnProfile";
 

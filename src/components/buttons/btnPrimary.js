@@ -12,5 +12,4 @@ function BtnPrimary({ onClick, children, className }) {
     </button>
   )
 }
-
 export default BtnPrimary
