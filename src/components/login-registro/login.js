@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import FalloContraseña from "../modals/fallocontraseña";
+import { navigate } from "gatsby";
 
 const LoginForm = ({ login }) => {
   const [email, setEmail] = useState('');
@@ -17,15 +18,20 @@ const LoginForm = ({ login }) => {
         body: JSON.stringify({ email, password })
       });
       const data = await response.json();
-      if (data.message === 'Conectado correctamente') {
+      if (data.message === 'Login exitoso') {
         console.log(data.user);
-        setMessage('Conectado correctamente');
+        setMessage('Login exitoso');
+        
+        // Guardar el nombre del usuario en localStorage
+        localStorage.setItem('userName', data.user.name);
+
+        navigate('/appsite'); // Redirige a la página AppSite
       } else {
-        setMessage('El usuario o la contraseña son incorrectos');
+        setMessage('Credenciales incorrectas');
       }
     } catch (error) {
       console.error('Error en el login', error);
-      setMessage('Error. Por favor, vuelva a intentarlo o contacte con el administrador');
+      setMessage('Error en el login');
     }
   };
 
@@ -40,6 +46,7 @@ const LoginForm = ({ login }) => {
       <h1>Iniciar sesión</h1>
       <Formik
         initialValues={{ email: "", password: "" }}
+        onSubmit={handleLogin}
       >
         <Form>
           <label htmlFor="email">Correo electrónico</label>
@@ -59,8 +66,8 @@ const LoginForm = ({ login }) => {
 
           <br />
 
-            <button type="submit" id="pimpam" onClick={handleLogin} className='buform'>Entrar</button>
-            <p>{message}</p>
+          <button type="button" id="pimpam" onClick={handleLogin} className='buform'>Entrar</button>
+          <p>{message}</p>
       
           <br />
           <br />

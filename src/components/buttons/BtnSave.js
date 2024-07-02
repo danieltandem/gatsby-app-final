@@ -1,33 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
+import { StaticImage } from "gatsby-plugin-image"
+import "../buttons/buttons.css"
+import BtnClose from './BtnClose';
+import "../modals/modal.css"
 
-const BtnSave = () => {
-  const [qrName, setQrName] = useState('');
-  const [imgQr, setImgQr] = useState(null);
-  const [description, setDescription] = useState('');
-  const [createdBy, setCreatedBy] = useState(1); // Reemplaza con el ID del usuario que creó el QR
+function BtnSave() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [saved, setSaved] = useState(false)
 
-  const handleSave = async () => {
-    const formData = new FormData();
-    formData.append('name_qr', qrName);
-    formData.append('img_qr', imgQr);
-    formData.append('description', description);
-    formData.append('created_by', createdBy);
+  const handleSave = () => {
+    // código para guardar el archivo
+    setSaved(true)
+  }
 
-    try {
-      const response = await fetch('http://localhost/bd-appqr/v1/qr/save-qr.php', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const toggleModal = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
-    <button onClick={handleSave}>Guardar QR</button>
-  );
-};
-export default BtnSave;
+    <React.Fragment>
+      <button className="btnSave animationFundido" onClick={toggleModal}>
+        <StaticImage
+          className="icon-save"
+          src="../../images/icons/icon-save.png"
+          alt="Save"
+        />
+        <span>Guardar</span>
+      </button>
+      {isOpen && (
+        <div className="modal-overlay">
+          <div className="modal animationFundido">
+            <div className="modal-header">
+              <h2>Guardar archivo</h2>
+              <BtnClose onClick={toggleModal}>
+              </BtnClose>
+            </div>
+            <div className="modal-body">
+              {saved ? (
+                <p>Archivo guardado correctamente!</p>
+              ) : (
+                <p>Su código Qr ha guardado correctamente en la base de datos.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </React.Fragment>
+  )
+}
+
+export default BtnSave

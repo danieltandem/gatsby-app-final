@@ -27,6 +27,7 @@ const register = async (name, email, password) => {
 const Auth = () => {
   return (
     <>
+    
       <Halt2 />
       <div className="auth-container">
         <LoginForm login={login} />
