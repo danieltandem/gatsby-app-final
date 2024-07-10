@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import "../buttons/buttons.css"
+import "./buttons.css"
 import BtnClose from "./BtnClose"
 import SelectRol from "../selects/select-rol"
 import BtnSecondary from "./BtnSecondary"

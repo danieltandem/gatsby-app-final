@@ -1,6 +1,5 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import "../buttons/buttons.css"
+import "./buttons.css"
 
 function BtnTertiary({ onClick, children }) {
   return (
