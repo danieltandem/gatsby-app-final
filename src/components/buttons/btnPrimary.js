@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import "../buttons/buttons.css"
 
 function BtnPrimary({ onClick, children, className }) {
@@ -11,4 +12,5 @@ function BtnPrimary({ onClick, children, className }) {
     </button>
   )
 }
+
 export default BtnPrimary
