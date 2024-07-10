@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
-import BtnTertiary from "../components/buttons/BtnTertiary"
-import BtnPrimary from "../components/buttons/BtnPrimary"
+import BtnPrimary from "../buttons/BtnPrimary"
 
 <div class="user">
   <BtnTertiary className="piolin">
