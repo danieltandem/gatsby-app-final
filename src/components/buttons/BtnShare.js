@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../buttons/buttons.css";
+import "./buttons.css";
 import "../modals/modal.css";
 import BtnClose from "./BtnClose";
 import BtnsSocialMedia from "./BtnsSocialMedia";

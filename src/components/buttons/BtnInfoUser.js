@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import "../buttons/buttons.css"
+import "./buttons.css"
 import BtnClose from "./BtnClose"
 import "../modals/modal.css"
-import "../buttons/buttons.css"
 
 function BtnInfoUser() {
   const [isOpen, setIsOpen] = useState(false)

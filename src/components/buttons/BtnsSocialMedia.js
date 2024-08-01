@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "../buttons/buttons.css"
+import "./buttons.css"
 import "../modals/modal.css"
 import {
   FacebookShareButton,

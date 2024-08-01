@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./comp.css"
 import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
 function MyComponent({ onColorChange, onSizeChange }) {
   const [selectedColor, setSelectedColor] = useState('negro');
   const [selectedSize, setSelectedSize] = useState('pequeño');

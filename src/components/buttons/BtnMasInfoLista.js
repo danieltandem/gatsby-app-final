@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react"
-import "../buttons/buttons.css"
+import "./buttons.css"
 import BtnClose from "./BtnClose"
 import "../modals/modal.css"
 
