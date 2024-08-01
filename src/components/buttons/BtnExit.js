@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import "./buttons.css"
+import "../buttons/buttons.css"
 import "../modals/modal.css"
-import BtnSecondary from "./BtnSecondary"
+import BtnSecondary from "../buttons/BtnSecondary"
 
 
 function BtnExit() {

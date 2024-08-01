@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./buttons.css"
+import "../buttons/buttons.css"
 const BtnDeslizante = () => {
   const [isOn, setIsOn] = useState(false);
   const toggleSwitch = () => {
