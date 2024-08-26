@@ -14,11 +14,12 @@ function BtnUserDelete({ mailto, deleteUser }) {
   }
 
   const handleDeleteUser = async () => {
+    if (typeof window !== 'undefined'){
     try {
       console.log("Iniciando petición para eliminar usuario", mail)
 
       const response = await fetch(
-        "http://localhost/bd-appqr/v1/user/delete-user.php",
+        "https://danieltandem.patrimonionacional.eu/bdappqr/v1/user/delete-user.php",
         {
           method: "DELETE",
           headers: {
@@ -45,7 +46,7 @@ function BtnUserDelete({ mailto, deleteUser }) {
       setMessage(`Error al eliminar el usuario: ${error.message}`)
     }
   }
-
+  }
   return (
     <React.Fragment>
       <div className="tooltip-container-configRol">
@@ -85,5 +86,7 @@ function BtnUserDelete({ mailto, deleteUser }) {
     </React.Fragment>
   )
 }
+
+
 
 export default BtnUserDelete

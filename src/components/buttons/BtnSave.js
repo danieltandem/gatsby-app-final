@@ -14,8 +14,8 @@ function BtnSave({ qrName, qrColor, qrSize, qrValue, createdBy }) {
       color_qr: qrColor,
       created_by: createdBy,
     };
-
-    fetch("http://localhost/bd-appqr/v1/qr/save-qr.php", {
+    if (typeof window !== 'undefined'){
+    fetch("https://danieltandem.patrimonionacional.eu/bdappqr/v1/qr/save-qr.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,6 +37,7 @@ function BtnSave({ qrName, qrColor, qrSize, qrValue, createdBy }) {
         setSaved(false);
       });
   };
+}
 
   return (
     <React.Fragment>
