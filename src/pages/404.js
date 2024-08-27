@@ -1,15 +1,22 @@
-import * as React from "react"
+import React from "react"
+import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const NotFoundPage = () => {
+  const isClient = typeof window !== "undefined"
 
-const NotFoundPage = () => (
-  <>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </>
-)
-
-export const Head = () => <Seo title="404: Not Found" />
+  return (
+    <div>
+      <h1>404: Not Found</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      {isClient && (
+        <div>
+          {/* Aquí podrías poner cualquier código que necesite acceso a window o document */}
+          <p>Contenido que solo se muestra en el cliente</p>
+        </div>
+      )}
+      <Link to="/">Go Home</Link>
+    </div>
+  )
+}
 
 export default NotFoundPage
