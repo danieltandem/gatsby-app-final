@@ -39,7 +39,8 @@ function BtnMasInfo({ mailto }) {
   }
 
   const fetchUserInfo = () => {
-    fetch("http://localhost/bd-appqr/v1/user/info-user.php", {
+    if (typeof window !== 'undefined'){
+    fetch("https://danieltandem.patrimonionacional.eu/bdappqr/v1/user/info-user.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,6 +55,8 @@ function BtnMasInfo({ mailto }) {
         console.error("Error fetching user info:", error)
       })
   }
+}
+
 
   return (
     <React.Fragment>
@@ -86,5 +89,7 @@ function BtnMasInfo({ mailto }) {
     </React.Fragment>
   )
 }
+
+
 
 export default BtnMasInfo

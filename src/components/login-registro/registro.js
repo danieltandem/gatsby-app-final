@@ -17,7 +17,7 @@ const RegisterForm = ({ register }) => {
   const handleRegistro = async () => {
     try {
       const response = await fetch(
-        "http://localhost/bd-appqr/v1/user/register.php",
+        "https://danieltandem.patrimonionacional.eu/bdappqr/v1/user/register.php",
         {
           method: "POST",
           headers: {
