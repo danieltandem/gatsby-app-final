@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
-
+const { merge } = require('webpack-merge');
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
